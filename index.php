@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Chatti</title>
-
+<script src="jquery-1.11.1.js"></script>
 <script>
 
 function submitChat() {
@@ -24,7 +24,11 @@ function submitChat() {
 				}
 			xmlhttp.open('GET','insert.php?uname='+uname+'&msg='+msg,true);
 			xmlhttp.send();
-	};
+	}
+	$(document).ready(function(e){
+		$.ajaxSetup({cache:false});
+		setInterval(function(){$('#chatlogs').load('logs.php');}, 2000);
+	});
 				
 				
 </script>
