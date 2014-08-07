@@ -1,5 +1,5 @@
 <?php
-session start();
+session_start();
 $uname = $_SESSION['username'];
 $msg = $_REQUEST['msg'];
 
