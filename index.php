@@ -2,6 +2,7 @@
 ?>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="tyylit.css">
 <title>Chatti</title>
 <script src="jquery-1.11.1.js"></script>
 <script>
@@ -36,6 +37,7 @@ function submitChat() {
 
 </head>
 <body>
+<div id="keskelle">
 <form name="form1">
 Kirjoita chat nimesi: <input type="text" name="uname"><br/>
 Viesti: <br/>
@@ -44,7 +46,8 @@ Viesti: <br/>
 </form>
 
 <div id="chatlogs">
-Lataa chatti logia odota...
+<img src="lataa.gif">
+</div>
 </div>
 
 </body>
