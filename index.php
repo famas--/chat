@@ -73,7 +73,10 @@ function submitChat() {
 <td><textarea name="msg"></textarea></td>
 </tr>
 <tr>
-<td colspan="2"><button type="button" onclick="submitChat()">Laheta</button></td>
+<td colspan="2"><button type="button" onclick="submitChat()">Send</button></td>
+</tr>
+<tr>
+<td colspan="2"><button type="button" onclick="window.location.href='logout.php'">Logout</button></td>
 </tr>
 </table>
 </form>
