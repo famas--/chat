@@ -1,5 +1,31 @@
 <?php
+
+session_start();
+if(!isset($_SESSION['username'])){
 ?>
+	<form name="form2" action="login.php" method="post">
+	<table border="1">
+	<tr>
+	<td>USERNAME:</td>
+	<td><input type="text" name="username"</td>
+	</tr>
+	<tr>
+	<td>PASSWORD:</td>
+	<td><input type="password" name="password"</td>
+	</tr>
+	<tr>
+	<td colspan="2"><input type="submit" name="submit" value="LOGIN"</td>
+	</tr>
+	<tr>
+	<td colspan="2"><a href="register.php">Register here to get an account</a></td>
+	</tr>
+	</table>
+
+<?php
+	exit;
+	}
+?>
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="tyylit.css">
