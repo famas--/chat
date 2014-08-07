@@ -34,13 +34,12 @@ if(!isset($_SESSION['username'])){
 <script>
 
 function submitChat() {
-		if(form1.uname.value == '' || form1.msg.value == ''){
-				alert("Molemmat kentat ovat pakollisia");
+		if(form1.msg.value == ''){
+				alert("Enter your message");
 				return;
 			}
-			form1.uname.readOnly = true;
-			form1.uname.style.border = 'none';
-			var uname = form1.uname.value;
+			
+			
 			var msg = form1.msg.value;
 			var xmlhttp = new XMLHttpRequest();
 
@@ -49,7 +48,7 @@ function submitChat() {
 							document.getElementById('chatlogs').innerHTML = xmlhttp.responseText;
 						}
 				}
-			xmlhttp.open('GET','insert.php?uname='+uname+'&msg='+msg,true);
+			xmlhttp.open('GET','insert.php?&msg='+msg,true);
 			xmlhttp.send();
 	}
 	$(document).ready(function(e){
