@@ -65,10 +65,18 @@ function submitChat() {
 <body>
 <div id="keskelle">
 <form name="form1">
-Kirjoita chat nimesi: <input type="text" name="uname"><br/>
-Viesti: <br/>
-<textarea name="msg"></textarea><br/>
-<button type="button" onclick="submitChat()">Laheta</button><br /><br/>
+<table border="1">
+<tr>
+<td>Your chat name:</td><td><b><?php echo $_SESSION['username'];?><b/></td>
+</tr>
+<tr>
+<td>Message: </td>
+<td><textarea name="msg"></textarea></td>
+</tr>
+<tr>
+<td colspan="2"><button type="button" onclick="submitChat()">Laheta</button></td>
+</tr>
+</table>
 </form>
 
 <div id="chatlogs">

@@ -1,5 +1,6 @@
 <?php
-$uname = $_REQUEST['uname'];
+session start();
+$uname = $_SESSION['username'];
 $msg = $_REQUEST['msg'];
 
 $con = mysql_connect('localhost','root','');
